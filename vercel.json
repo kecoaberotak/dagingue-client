@@ -6,6 +6,5 @@
       "use": "@vercel/next"
     }
   ],
-  "routes": [],
-  "outputDirectory": ".next"
+  "routes": []
 }
