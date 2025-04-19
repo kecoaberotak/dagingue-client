@@ -7,7 +7,15 @@ export const getContentData = async () => {
     const response = await axios.get(`${BASE_URL}/api/content`);
     return response.data.data;
   } catch (error) {
-    // ini ubah lagi agar lebih informatif
-    console.error("Failed to fetch landing data", error);
+    let errorMessage = "Unknown error occurred";
+
+    if (axios.isAxiosError(error)) {
+      errorMessage = error.response?.data?.message || error.message;
+    } else if (error instanceof Error) {
+      errorMessage = error.message;
+    }
+
+    console.error("Failed to fetch landing data:", errorMessage);
+    return null;
   }
 };
