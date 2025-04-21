@@ -5,10 +5,14 @@ export const metadata = {
 
 import HeroSection from "@/components/sections/HeroSection";
 import { getContentData } from "@/services/home.service";
-import getValueByKey from "@/utils/getValueByKey";
+import { getValueByKey } from "@/utils/getValueByKey";
 
 export default async function Home() {
   const data = await getContentData();
+
+  if (!data) {
+    throw new Error("Failed to load landing page data");
+  }
 
   const heroImage = getValueByKey(data, "hero_image");
   const logoImage = getValueByKey(data, "logo_image");

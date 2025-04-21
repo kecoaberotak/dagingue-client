@@ -1,11 +1,4 @@
-type LandingPageContent = {
-  id: string;
-  key: string;
-  value: string;
-  created_at?: string;
-  updated_at?: string;
-};
-
-export default function getValueByKey(data: LandingPageContent[], key: string) {
-  return data.find((item) => item.key === key)?.value || "";
+// helper.ts
+export function getValueByKey(data: Array<{ key: string; value: string }> | null | undefined, key: string): string {
+  return data?.find((item) => item.key === key)?.value || "";
 }
