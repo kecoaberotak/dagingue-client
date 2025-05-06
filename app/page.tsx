@@ -18,7 +18,7 @@ export default async function Home() {
   const logoImage = getValueByKey(data, "logo_image");
 
   return (
-    <main className="min-h-screen py-10 px-4">
+    <main className="min-h-screen w-full">
       <HeroSection hero_img={heroImage} logo_img={logoImage} />
     </main>
   );
