@@ -3,15 +3,14 @@ type HeroProps = {
   logo_img: string;
 };
 
-import Image from "next/image";
+import Logo from "../atoms/Logo";
 
 export default function HeroSection({ hero_img, logo_img }: HeroProps) {
+  console.log(logo_img);
+
   return (
-    <section className="w-full h-[379px] bg-no-repeat bg-cover bg-center mb-[50px] grid justify-center" style={{ backgroundImage: `url(${hero_img})` }}>
-      <div className="relative z-10 text-center">
-        <Image src={logo_img} alt="Logo" className="w-32 h-32 mx-auto mb-4" width={700} height={700} />
-        <h1 className="text-3xl md:text-5xl font-bold text-[var(--merah)]">Selamat Datang</h1>
-      </div>
+    <section className="w-full h-[379px] bg-no-repeat bg-cover bg-center mb-[50px] grid justify-center" style={{ backgroundImage: `url(${hero_img})` }} id="home">
+      <Logo logo_img={logo_img} />
     </section>
   );
 }
