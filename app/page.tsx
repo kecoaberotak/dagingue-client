@@ -16,10 +16,13 @@ export default async function Home() {
 
   const heroImage = getValueByKey(data, "hero_image");
   const logoImage = getValueByKey(data, "logo_image");
+  const social_shopee = getValueByKey(data, "social_shopee");
+  const social_instagram = getValueByKey(data, "social_instagram");
+  const social_whatsapp = getValueByKey(data, "social_whatsapp");
 
   return (
     <main className="min-h-screen w-full">
-      <HeroSection hero_img={heroImage} logo_img={logoImage} />
+      <HeroSection hero_img={heroImage} logo_img={logoImage} social_shopee={social_shopee} social_instagram={social_instagram} social_whatsapp={social_whatsapp} />
     </main>
   );
 }
