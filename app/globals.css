@@ -79,6 +79,7 @@
   --putih: #fffbfd;
   --merah: #9d2330;
   --abu: #666;
+  --font-montserrat: "Montserrat";
 }
 
 .dark {
@@ -115,12 +116,27 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+/* @layer base {
+  * {
+    @apply border-border outline-ring/50 scroll-smooth;
+    font-family: var(--font-montserrat), sans-serif;
+  }
+
+  body {
+    @apply bg-[var(--putih)];
+  }
+} */
+
 @layer base {
   * {
-    @apply border-border outline-ring/50;
+    @apply border-border outline-ring/50 scroll-smooth;
   }
-  body {
-    @apply bg-background text-foreground;
+
+  html {
     font-family: var(--font-montserrat), sans-serif;
+  }
+
+  body {
+    @apply bg-[var(--putih)];
   }
 }
