@@ -139,4 +139,16 @@
   body {
     @apply bg-[var(--putih)];
   }
+
+  h1 {
+    @apply font-medium text-[32px];
+  }
+
+  h2 {
+    @apply font-medium text-2xl;
+  }
+
+  h3 {
+    @apply font-normal text-lg;
+  }
 }
