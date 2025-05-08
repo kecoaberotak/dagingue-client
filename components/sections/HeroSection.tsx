@@ -1,20 +1,15 @@
-type HeroProps = {
-  hero_img: string;
-  logo_img: string;
-  social_whatsapp: string;
-  social_shopee: string;
-  social_instagram: string;
-};
+"use client";
 
+import { useHomeContext } from "@/contexts/HomeContext";
 import Logo from "../atoms/Logo";
 import Socmed from "../atoms/Socmed";
 
-export default function HeroSection({ hero_img, logo_img, social_instagram, social_shopee, social_whatsapp }: HeroProps) {
-  console.log(logo_img);
+export default function HeroSection() {
+  const { hero_image = "", logo_image = "", social_instagram = "", social_shopee = "", social_whatsapp = "" } = useHomeContext();
 
   return (
-    <section className="w-full h-[379px] bg-no-repeat bg-cover bg-center mb-[50px] grid justify-center" style={{ backgroundImage: `url(${hero_img})` }} id="home">
-      <Logo logo_img={logo_img} />
+    <section className="w-full h-[379px] bg-no-repeat bg-cover bg-center mb-[50px] grid justify-center" style={{ backgroundImage: `url(${hero_image})` }} id="home">
+      <Logo logo_image={logo_image} />
       <ul className="navbar-hero">
         <li>
           <a href="#about">Tentang Kami</a>
