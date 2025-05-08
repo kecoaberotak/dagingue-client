@@ -4,6 +4,7 @@ export const metadata = {
 };
 
 import HeroSection from "@/components/sections/HeroSection";
+import AboutSection from "@/components/sections/AboutSection";
 import { getContentData } from "@/services/home.service";
 import { getValueByKey } from "@/utils/getValueByKey";
 import { HomeProvider } from "@/contexts/HomeContext";
@@ -20,11 +21,15 @@ export default async function Home() {
   const social_shopee = getValueByKey(data, "social_shopee");
   const social_instagram = getValueByKey(data, "social_instagram");
   const social_whatsapp = getValueByKey(data, "social_whatsapp");
+  const about_us = getValueByKey(data, "about_us");
+  const img_1 = getValueByKey(data, "img_1");
+  const img_2 = getValueByKey(data, "img_2");
 
   return (
     <main className="min-h-screen w-full">
-      <HomeProvider value={{ hero_image, logo_image, social_instagram, social_shopee, social_whatsapp }}>
+      <HomeProvider value={{ hero_image, logo_image, social_instagram, social_shopee, social_whatsapp, about_us, img_1, img_2 }}>
         <HeroSection />
+        <AboutSection />
       </HomeProvider>
     </main>
   );
