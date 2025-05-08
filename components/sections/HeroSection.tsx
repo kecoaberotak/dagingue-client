@@ -8,7 +8,7 @@ export default function HeroSection() {
   const { hero_image = "", logo_image = "", social_instagram = "", social_shopee = "", social_whatsapp = "" } = useHomeContext();
 
   return (
-    <section className="w-full h-[379px] bg-no-repeat bg-cover bg-center mb-[50px] grid justify-center" style={{ backgroundImage: `url(${hero_image})` }} id="home">
+    <section className="hero" style={{ backgroundImage: `url(${hero_image})` }} id="home">
       <Logo logo_image={logo_image} />
       <ul className="navbar-hero">
         <li>

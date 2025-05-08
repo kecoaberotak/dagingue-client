@@ -154,6 +154,10 @@
 }
 
 @layer components {
+  .hero {
+    @apply w-full h-[379px] bg-no-repeat bg-cover bg-center mb-[50px] grid justify-center;
+  }
+
   .navbar-hero {
     @apply grid grid-flow-col justify-center text-sm gap-[15px] mt-[50px] mb-[50px] md:mb-0 sm:text-base sm:gap-[22px];
   }
