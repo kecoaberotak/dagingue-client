@@ -9,6 +9,9 @@ export type HomeContextType = {
   social_shopee: string;
   social_instagram: string;
   social_whatsapp: string;
+  about_us: string;
+  img_1: string;
+  img_2: string;
 };
 
 // Tipe context adalah Partial<HomeContextType> agar data bisa optional
