@@ -116,17 +116,6 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-/* @layer base {
-  * {
-    @apply border-border outline-ring/50 scroll-smooth;
-    font-family: var(--font-montserrat), sans-serif;
-  }
-
-  body {
-    @apply bg-[var(--putih)];
-  }
-} */
-
 @layer base {
   * {
     @apply border-border outline-ring/50 scroll-smooth;
@@ -172,5 +161,42 @@
 
   .socmed-icon {
     @apply text-[var(--putih)];
+  }
+
+  .about {
+    @apply grid justify-center content-center mb-[50px] md:grid-cols-2;
+  }
+
+  .image-about {
+    @apply justify-center items-center relative left-20 -top-[50px] hidden md:flex md:order-1 md:scale-90 lg:scale-100;
+  }
+
+  .foto-1 {
+    @apply w-[282px] border-[3px] border-[var(--merah)];
+  }
+
+  .foto-2 {
+    @apply w-[201px] border-[3px] border-[var(--merah)] relative -left-[110px] top-[145px];
+  }
+
+  .article-about {
+    @apply md:order-2 grid gap-[8px] p-6 leading-normal md:scale-90;
+  }
+
+  .article-about h1 {
+    @apply text-[var(--merah)] font-bold text-lg;
+  }
+
+  .article-about h2 {
+    @apply text-3xl;
+  }
+
+  .article-about li {
+    @apply indent-4 list-none;
+  }
+
+  .article-about li::before {
+    content: "\25CB";
+    @apply text-[var(--merah)];
   }
 }
