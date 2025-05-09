@@ -12,6 +12,8 @@ export type HomeContextType = {
   about_us: string;
   img_1: string;
   img_2: string;
+  banner_footer: string;
+  banner_product: string;
 };
 
 // Tipe context adalah Partial<HomeContextType> agar data bisa optional
