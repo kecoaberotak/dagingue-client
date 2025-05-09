@@ -208,10 +208,6 @@
     @apply flex flex-col items-center;
   }
 
-  /* .product-potong {
-    background-image: image-set(url("/background.avif") type("image/avif"), url("/background.png") type("image/png"));
-  } */
-
   .product-potong {
     @apply h-fit w-full bg-no-repeat bg-cover bg-center grid justify-center gap-[15px];
   }
