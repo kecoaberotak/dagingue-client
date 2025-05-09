@@ -1,8 +1,12 @@
 export default function ProductSection() {
   return (
-    <section className="p-8 bg-white text-center">
-      <h2 className="text-xl font-semibold mb-4">Produk Kami</h2>
-      <p>Produk Produk Produk</p>
+    <section className="product" id="product">
+      <div className="product-potong">
+        <section className="title-section potong">
+          <h3>Produk</h3>
+          <p>Jenis Potongan</p>
+        </section>
+      </div>
     </section>
   );
 }
