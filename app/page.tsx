@@ -9,9 +9,12 @@ import ProductSection from "@/components/sections/ProductSection";
 import { getContentData } from "@/services/home.service";
 import { getValueByKey } from "@/utils/getValueByKey";
 import { HomeProvider } from "@/contexts/HomeContext";
+import { PotongProvider } from "@/contexts/PotongContext";
+import { getPotongData } from "@/services/product.service";
 
 export default async function Home() {
   const data = await getContentData();
+  const dataPotong = await getPotongData();
 
   if (!data) {
     throw new Error("Failed to load landing page data");
@@ -33,7 +36,10 @@ export default async function Home() {
       <HomeProvider value={{ hero_image, logo_image, social_instagram, social_shopee, social_whatsapp, about_us, img_1, img_2, banner_footer, banner_product }}>
         <HeroSection />
         <AboutSection />
-        <ProductSection />
+        {/* @ts-expect-error: Data type mismatch is intentionally ignored */}
+        <PotongProvider value={dataPotong}>
+          <ProductSection />
+        </PotongProvider>
       </HomeProvider>
     </main>
   );

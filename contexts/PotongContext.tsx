@@ -8,16 +8,16 @@ export type PotongContextType = {
   berat: string;
 };
 
-const PotongContext = createContext<Partial<PotongContextType> | undefined>(undefined);
+const PotongContext = createContext<PotongContextType[] | undefined>(undefined);
 
-export const PotongProvider = ({ children, value }: { children: ReactNode; value: Partial<PotongContextType> }) => {
+export const PotongProvider = ({ children, value }: { children: ReactNode; value: PotongContextType[] }) => {
   return <PotongContext.Provider value={value}>{children}</PotongContext.Provider>;
 };
 
 export const usePotongContext = () => {
   const context = useContext(PotongContext);
   if (!context) {
-    throw new Error("usePotongContext must be used within HomeProvider");
+    throw new Error("usePotongContext must be used within PotongProvider");
   }
   return context;
 };
