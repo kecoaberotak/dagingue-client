@@ -199,4 +199,32 @@
     content: "\25CB";
     @apply text-[var(--merah)];
   }
+
+  .product {
+    @apply mb-[50px] grid gap-[50px];
+  }
+
+  .title-section {
+    @apply flex flex-col items-center;
+  }
+
+  /* .product-potong {
+    background-image: image-set(url("/background.avif") type("image/avif"), url("/background.png") type("image/png"));
+  } */
+
+  .product-potong {
+    @apply h-fit w-full bg-no-repeat bg-cover bg-center grid justify-center gap-[15px];
+  }
+
+  .potong {
+    @apply mt-[20px];
+  }
+
+  .title-section p {
+    @apply text-black text-[32px] font-bold;
+  }
+
+  .title-section h3 {
+    @apply text-[var(--merah)] font-semibold;
+  }
 }
