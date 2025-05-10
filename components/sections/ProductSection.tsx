@@ -19,7 +19,7 @@ export default function ProductSection() {
   }
 
   return (
-    <section className="product" id="product" style={{ backgroundImage: `url(${banner_product})` }}>
+    <section className="product-potong" id="product" style={{ backgroundImage: `url(${banner_product})` }}>
       <Title classname="title-section potong" title="Produk" subTitle="Jenis Potongan" />
       <section className={classname}>
         {data.map((potong) => {
