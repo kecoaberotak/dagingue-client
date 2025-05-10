@@ -3,6 +3,7 @@
 import React, { createContext, useContext, ReactNode } from "react";
 
 export type PotongContextType = {
+  id: string;
   nama: string;
   gambar: string;
   berat: string;
