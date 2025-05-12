@@ -7,10 +7,10 @@ const ListBumbu = () => {
   const data = useBumbuContext();
 
   return (
-    <section className="gallery-items">
+    <section className="list-bumbu">
       {data.map((bumbu) => {
         return (
-          <div className="gallery-item-image" key={bumbu.id}>
+          <div className="list-bumbu-image" key={bumbu.id}>
             <Image width={1080} height={1080} src={bumbu.gambar} alt={bumbu.nama} title={bumbu.nama} />
           </div>
         );
