@@ -6,14 +6,14 @@ import Socmed from "../atoms/Socmed";
 import Logo from "../atoms/Logo";
 
 export default function FooterSection() {
-  const { banner_product } = useHomeContext();
+  const { banner_product, banner_footer } = useHomeContext();
 
   return (
     <>
       <section className="footer-banner" style={{ backgroundImage: `url(${banner_product})` }}>
         <Title classname="banner-info" title="Kontak" subTitle="Hubungi Kami" />
       </section>
-      <section className="footer-contact" style={{ backgroundImage: `url(${banner_product})` }}>
+      <section className="footer-contact" style={{ backgroundImage: `url(${banner_footer})` }}>
         <div className="contact-info">
           <section className="contact-info-main">
             <p>
@@ -33,7 +33,7 @@ export default function FooterSection() {
               </a>
             </p>
           </section>
-          <Socmed />
+          <Socmed classname="contact-info-socmed" />
         </div>
         <Logo classname="contact-logo" />
       </section>

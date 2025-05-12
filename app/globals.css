@@ -315,10 +315,6 @@
     @apply opacity-50;
   }
 
-  /* .footer-banner {
-    background-image: image-set(url("/bg-banner-footer.avif") type("image/avif"), url("/bg-banner-footer.jpg") type("image/jpeg"));
-  } */
-
   .footer-banner {
     @apply w-full h-full bg-no-repeat bg-cover flex items-center py-3;
   }
@@ -334,10 +330,6 @@
   .banner-info p {
     @apply font-bold text-[22px] sm:text-[28px] md:text-[32px];
   }
-
-  /* .footer-contact {
-    background-image: image-set(url("/bg-footer.avif") type("image/avif"), url("/bg-footer.jpg") type("image/jpeg"));
-  } */
 
   .footer-contact {
     @apply w-full h-[378px] grid grid-cols-2 justify-center content-center md:gap-[50px];
