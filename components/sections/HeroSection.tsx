@@ -5,11 +5,11 @@ import Logo from "../atoms/Logo";
 import Socmed from "../atoms/Socmed";
 
 export default function HeroSection() {
-  const { hero_image = "", logo_image = "" } = useHomeContext();
+  const { hero_image = "" } = useHomeContext();
 
   return (
     <section className="hero" style={{ backgroundImage: `url(${hero_image})` }} id="home">
-      <Logo logo_image={logo_image} />
+      <Logo classname="logo" />
       <ul className="navbar-hero">
         <li>
           <a href="#about">Tentang Kami</a>

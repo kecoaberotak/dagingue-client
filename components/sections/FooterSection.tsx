@@ -3,9 +3,10 @@
 import { useHomeContext } from "@/contexts/HomeContext";
 import Title from "../atoms/Title";
 import Socmed from "../atoms/Socmed";
+import Logo from "../atoms/Logo";
 
 export default function FooterSection() {
-  const { banner_footer, banner_product } = useHomeContext();
+  const { banner_product } = useHomeContext();
 
   return (
     <>
@@ -34,6 +35,7 @@ export default function FooterSection() {
           </section>
           <Socmed />
         </div>
+        <Logo classname="contact-logo" />
       </section>
     </>
   );
