@@ -3,6 +3,7 @@
 import { useBumbuContext } from "@/contexts/BumbuContext";
 import Title from "../atoms/Title";
 import Image from "next/image";
+import ListBumbu from "../molecules/ListBumbu";
 
 export default function Bumbu() {
   const data = useBumbuContext();
@@ -20,15 +21,7 @@ export default function Bumbu() {
             <div className="w-[300px] h-[120px] sm:w-[376px] sm:h-[130px]" dangerouslySetInnerHTML={{ __html: data[0].deskripsi }} />
           </div>
         </section>
-        <section className="gallery-items">
-          {data.map((bumbu) => {
-            return (
-              <div className="gallery-item-image" key={bumbu.id}>
-                <Image width={1080} height={1080} src={bumbu.gambar} alt={bumbu.nama} title={bumbu.nama} />
-              </div>
-            );
-          })}
-        </section>
+        <ListBumbu />
       </div>
     </section>
   );
