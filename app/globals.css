@@ -352,7 +352,7 @@
   }
 
   .contact-info-main a {
-    @apply text-putih;
+    @apply text-[var(--putih)];
   }
 
   .contact-info-socmed {

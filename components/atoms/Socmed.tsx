@@ -1,10 +1,10 @@
-type SocmedProps = {
-  social_whatsapp: string;
-  social_shopee: string;
-  social_instagram: string;
-};
+"use client";
 
-const Socmed = ({ social_instagram, social_shopee, social_whatsapp }: SocmedProps) => {
+import { useHomeContext } from "@/contexts/HomeContext";
+
+const Socmed = () => {
+  const { social_instagram = "", social_shopee = "", social_whatsapp = "" } = useHomeContext();
+
   return (
     <ul className="socmed">
       <li className="socmed-icon">

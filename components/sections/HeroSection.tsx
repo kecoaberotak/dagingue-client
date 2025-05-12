@@ -5,7 +5,7 @@ import Logo from "../atoms/Logo";
 import Socmed from "../atoms/Socmed";
 
 export default function HeroSection() {
-  const { hero_image = "", logo_image = "", social_instagram = "", social_shopee = "", social_whatsapp = "" } = useHomeContext();
+  const { hero_image = "", logo_image = "" } = useHomeContext();
 
   return (
     <section className="hero" style={{ backgroundImage: `url(${hero_image})` }} id="home">
@@ -21,7 +21,7 @@ export default function HeroSection() {
           <a href="#contact">Kontak</a>
         </li>
       </ul>
-      <Socmed social_instagram={social_instagram} social_shopee={social_shopee} social_whatsapp={social_whatsapp} />
+      <Socmed />
     </section>
   );
 }
