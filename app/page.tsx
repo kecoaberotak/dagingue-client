@@ -6,6 +6,7 @@ export const metadata = {
 import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
 import ProductSection from "@/components/sections/ProductSection";
+import FooterSection from "@/components/sections/FooterSection";
 import { getContentData } from "@/services/home.service";
 import { getValueByKey } from "@/utils/getValueByKey";
 import { HomeProvider } from "@/contexts/HomeContext";
@@ -34,6 +35,7 @@ export default async function Home() {
         <HeroSection />
         <AboutSection />
         <ProductSection />
+        <FooterSection />
       </HomeProvider>
     </main>
   );
