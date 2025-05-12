@@ -10,7 +10,7 @@ export default function FooterSection() {
 
   return (
     <>
-      <section className="footer-banner" style={{ backgroundImage: `url(${banner_product})` }}>
+      <section className="footer-banner" id="contact" style={{ backgroundImage: `url(${banner_product})` }}>
         <Title classname="banner-info" title="Kontak" subTitle="Hubungi Kami" />
       </section>
       <section className="footer-contact" style={{ backgroundImage: `url(${banner_footer})` }}>
