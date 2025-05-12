@@ -2,11 +2,11 @@
 
 import { useHomeContext } from "@/contexts/HomeContext";
 
-const Socmed = () => {
+const Socmed = ({ classname = "socmed" }: { classname?: string }) => {
   const { social_instagram = "", social_shopee = "", social_whatsapp = "" } = useHomeContext();
 
   return (
-    <ul className="socmed">
+    <ul className={classname}>
       <li className="socmed-icon">
         <a href={social_instagram} target="_blank" rel="noreferrer">
           <svg width="28" role="img" className="fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
