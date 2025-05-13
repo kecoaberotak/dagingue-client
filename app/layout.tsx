@@ -9,8 +9,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Dagingue | Slice Beef Bogor",
-  description: "Menjual slice beef dengan berbagai varian bumbu, seperti bulgogi, bbq, lada hitam, dan teriyaki.",
+  title: "Dagingue | Beef Slice Bogor",
+  description: "Menjual beef slice dengan berbagai varian bumbu, seperti bulgogi, bbq, lada hitam, dan teriyaki.",
 };
 
 export default function RootLayout({
