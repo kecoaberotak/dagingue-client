@@ -1,8 +1,3 @@
-export const metadata = {
-  title: "Landing Page - Daging & Bumbu",
-  description: "Daging dan Bumbu siap masak dengan kualitas terbaik. Tersedia produk segar, higienis, dan praktis.",
-};
-
 import HeroSection from "@/components/sections/HeroSection";
 import AboutSection from "@/components/sections/AboutSection";
 import ProductSection from "@/components/sections/ProductSection";
