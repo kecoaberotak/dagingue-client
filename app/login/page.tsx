@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import axios, { AxiosError } from "axios";
+import { login } from "@/services/auth.service";
 
 export default function LoginPage() {
   const router = useRouter();
@@ -14,24 +14,14 @@ export default function LoginPage() {
     e.preventDefault();
     setErrorMsg("");
 
-    try {
-      const response = await axios.post(`${process.env.NEXT_PUBLIC_API_URL}/auth/signin`, { email, password });
+    const error = await login(email, password);
 
-      const { token } = response.data.result;
-
-      // Simpan ke localStorage (boleh tetap kalau kamu pakai di komponen)
-      localStorage.setItem("token", token);
-
-      // Simpan juga ke cookie agar bisa dibaca oleh middleware
-      document.cookie = `token=${token}; path=/`;
-
-      // Redirect ke dashboard
-      router.push("/admin");
-    } catch (error: unknown) {
-      const err = error as AxiosError;
-      const errorMessage = (err?.response?.data as { message?: string })?.message || err.message;
-      setErrorMsg(errorMessage);
+    if (error) {
+      setErrorMsg(error);
+      return;
     }
+
+    router.push("/admin");
   };
   return (
     <form className="form-login" onSubmit={handleLogin}>
